@@ -1,12 +1,11 @@
 const counters = {};
 
 const newCounterForm = document.getElementById('new-counter');
-newCounterForm.addEventListener('submit', (e) => {
-  e.preventDefault();
+newCounterForm.addEventListener('submit', (event) => {
+  event.preventDefault();
 
   const counterInput = document.getElementById('counter-input');
   const counterName = counterInput.value
-  
   if (counterName === '') return;
   for (let key in counters) {
     if (counterName === key) return;
@@ -14,16 +13,27 @@ newCounterForm.addEventListener('submit', (e) => {
 
   counters[counterName] = 0;
   counterInput.value = '';
+  addCounter(counterName);
 
   console.log(counters);
-
-  appendCounters(counterName);
 });
 
-function appendCounters(name) {
+function addCounter(name) {
   const counterContainer = document.getElementById('counter-container');
-  const newListItem = document.createElement('li');
+  const counterElement = document.createElement('li');
 
-  newListItem.textContent = name;
-  counterContainer.appendChild(newListItem);
+  counterElement.innerHTML = `
+    <span>${name}</span>
+    <button onclick="decrementCounter(this)">-</button>
+    <span>0</span>
+    <button onclick="incrementCounter(this)">+</button>
+  `;
+
+  counterContainer.appendChild(counterElement);
+};
+
+function incrementCounter(button) {
+  const element = button.previousElementSibling;
+  const number = parseInt(element.textContent);
+  element.textContent = number + 1;
 }
