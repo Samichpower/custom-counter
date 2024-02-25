@@ -1,5 +1,3 @@
-const counters = {};
-
 const newCounterForm = document.getElementById('new-counter');
 newCounterForm.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -7,15 +5,8 @@ newCounterForm.addEventListener('submit', (event) => {
   const counterInput = document.getElementById('counter-input');
   const counterName = counterInput.value
   if (counterName === '') return;
-  for (let key in counters) {
-    if (counterName === key) return;
-  }
-
-  counters[counterName] = 0;
   counterInput.value = '';
   addCounter(counterName);
-
-  console.log(counters);
 });
 
 function addCounter(name) {
