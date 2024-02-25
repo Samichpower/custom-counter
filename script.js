@@ -28,3 +28,11 @@ function incrementCounter(button) {
   const number = parseInt(element.textContent);
   element.textContent = number + 1;
 }
+
+function decrementCounter(button) {
+  const element = button.nextElementSibling;
+  const number = parseInt(element.textContent);
+  if (element.textContent > 0) {
+    element.textContent = number - 1;
+  };
+}
