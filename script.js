@@ -19,12 +19,12 @@ function addCounter(name) {
   counterElement.innerHTML = `
     <div>
       <span class="counter-name">${name}</span>
-      <button onclick="deleteElement(this)" class="delete button">x</button>
+      <button onclick="deleteElement(this)" class="delete">x</button>
     </div>
     <div>
-      <button onclick="decrementCounter(this)" class="button">-</button>
-      <span>0</span>
-      <button onclick="incrementCounter(this)" class="button">+</button>
+      <button onclick="decrementCounter(this)" class="num-button">-</button>
+      <span class="number">0</span>
+      <button onclick="incrementCounter(this)" class="num-button">+</button>
     </div>
   `;
   counterContainer.appendChild(counterElement);
