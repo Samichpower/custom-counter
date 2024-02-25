@@ -43,4 +43,4 @@ function deleteElement(button) {
   if (toDelete) {
     parent.remove();
   }
-}
+};
