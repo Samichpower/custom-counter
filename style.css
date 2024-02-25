@@ -64,13 +64,22 @@ body {
 }
 
 h1 {
-  padding-top: 15px;
+  padding: 15px;
   font-weight: bold;
   font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  background-color: whitesmoke;
+  border-bottom: 1px solid rgb(37, 37, 37);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
 
 ul {
-  width: min(400px, 80%);
+  width: 430px;
 }
 
 li {
