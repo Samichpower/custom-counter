@@ -18,10 +18,12 @@ function addCounter(name) {
   const counterElement = document.createElement('li');
   counterElement.innerHTML = `
     <span class="counter-name">${name}</span>
-    <button onclick="decrementCounter(this)" class="button">-</button>
-    <span>0</span>
-    <button onclick="incrementCounter(this)" class="button">+</button>
     <button onclick="deleteElement(this)" class="delete button">x</button>
+    <div>
+      <button onclick="decrementCounter(this)" class="button">-</button>
+      <span>0</span>
+      <button onclick="incrementCounter(this)" class="button">+</button>
+    </div>
   `;
   counterContainer.appendChild(counterElement);
   updateLocalStorage();
