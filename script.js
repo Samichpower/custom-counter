@@ -52,10 +52,10 @@ function deleteElement(button) {
   const toDelete = confirm(`Are you sure you wish to delete this element?`);
   if (toDelete) {
     parentListElement.classList.add('delete-animation');
-    setInterval(() => {
+    setTimeout(() => {
       parentListElement.remove();
       updateLocalStorage();
-    }, 1000);
+    }, 95);
   };
 };
 
