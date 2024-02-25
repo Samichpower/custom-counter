@@ -69,7 +69,7 @@ h1 {
   font-size: 1.5rem;
   width: 100%;
   text-align: center;
-  background-color: whitesmoke;
+  background-color: #f0f0f0;
   border-bottom: 1px solid rgb(37, 37, 37);
 }
 
@@ -84,7 +84,7 @@ ul {
 
 li {
   border: 1px solid rgb(37, 37, 37);
-  background-color: whitesmoke;
+  background-color: #f0f0f0;
   padding: 5px;
   display: flex;
   flex-direction: column;
