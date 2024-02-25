@@ -78,8 +78,8 @@ form {
   flex-direction: column;
 }
 
-ul {
-  width: 430px;
+#counter-container {
+  width: min(430px, 100vw);
 }
 
 li {
