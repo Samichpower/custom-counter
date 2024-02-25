@@ -90,6 +90,13 @@ li {
   flex-direction: column;
   text-align: center;
   gap: 10px;
+  overflow: hidden;
+  max-height: 150px; /* Do 100% instead after getting it working with the button */
+  transition: max-height 0.3s;
+}
+
+.delete-animation {
+  max-height: 0px;
 }
 
 li div:first-child {

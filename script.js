@@ -48,11 +48,14 @@ function decrementCounter(button) {
 };
 
 function deleteElement(button) {
-  const parent = button.parentElement.parentElement;
+  const parentListElement = button.parentElement.parentElement;
   const toDelete = confirm(`Are you sure you wish to delete this element?`);
   if (toDelete) {
-    parent.remove();
-    updateLocalStorage();
+    parentListElement.classList.add('delete-animation');
+    setInterval(() => {
+      parentListElement.remove();
+      updateLocalStorage();
+    }, 1000);
   };
 };
 
