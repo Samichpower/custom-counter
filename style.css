@@ -120,3 +120,7 @@ li div:last-child {
   height: 1.5rem;
   width: 1.5rem;
 }
+
+input, #submit-button {
+  font-size: .8rem;
+}
