@@ -1,7 +1,6 @@
 const newCounterForm = document.getElementById('new-counter');
 newCounterForm.addEventListener('submit', (event) => {
   event.preventDefault();
-
   const counterInput = document.getElementById('counter-input');
   const counterName = counterInput.value
   if (counterName === '') return;
@@ -22,7 +21,7 @@ function addCounter(name) {
     <button onclick="decrementCounter(this)" class="button">-</button>
     <span>0</span>
     <button onclick="incrementCounter(this)" class="button">+</button>
-    <button onclick="deleteElement(this)" class="button">x</button>
+    <button onclick="deleteElement(this)" class="delete button">x</button>
   `;
   counterContainer.appendChild(counterElement);
   updateLocalStorage();
@@ -50,7 +49,7 @@ function deleteElement(button) {
   if (toDelete) {
     parent.remove();
     updateLocalStorage();
-  }
+  };
 };
 
 window.addEventListener('load', () => {
